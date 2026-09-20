@@ -2,6 +2,7 @@ package at.htl.shkodra;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 
 public record Schueler(String name, int jahrgang, String gruppe) {
@@ -15,5 +16,7 @@ public record Schueler(String name, int jahrgang, String gruppe) {
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         System.out.println(gson.toJson(liste));
+
+        System.out.println(StringUtils.reverse("Shkodra"));
     }
 }
